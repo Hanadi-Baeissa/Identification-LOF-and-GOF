@@ -1,0 +1,4 @@
+run FATHMM cancer of misssense mutations to classify mutation into cancer or benign 
+use protein identifier and the amino acid substitution in the conventional one letter format
+
+Classify mutation wheather cancer or passenger
