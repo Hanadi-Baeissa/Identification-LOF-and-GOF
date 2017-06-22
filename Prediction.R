@@ -1,7 +1,7 @@
 set.seed(12345)
 library(plyr)
 library(randomForest)
-data_new <- read.csv("TrainingSet-27features.csv",header=TRUE)
+data_new <- read.csv("TestSet.csv",header=TRUE)
 
 # following line merges column 1 and column 2 and create a new column named "rowN" which has Protein_ID and Mutation name together and seperated by '_'. you may choose any thing eg sep="_with_mutation_at" or sep ="," or sep =";" etc. If you will use sep="," then in final result.csv you have to shift column names and should write for your self.
 
