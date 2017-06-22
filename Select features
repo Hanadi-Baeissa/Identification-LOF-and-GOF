@@ -4,11 +4,9 @@ run FATHMM cancer
 for cancer-associated mutation to get the features (31 features)
 
 ## Four features selected from FATHMM cancer including: HMM Weights D., HMM Weights O.,HMM Prob W. and HMM Prob M..
-## Four features selected from FATHMM disease including: HMM Weights D., HMM Weights O.,HMM Prob W. and HMM Prob M..
-## Eleven features selected from PolyPhen-2 including: PPh2 class, site, region, PHAT, PSIC Score1, PSIC Score2, dScore, 
-## Transv, CodPos, CpG and PfamHit. 
+## One feature selected from FATHMM disease which is HMM Weights D..
+## Nine features selected from PolyPhen-2 including: site, region, PHAT, PSIC Score1, dScore, Transv, CodPos, CpG and PfamHit. 
 
 The last source of features was the protein  surface accessibility and secondary structure predictions (NetSurfP) server.
 ## Twelve features selected from (NetSurfP) each feature is provided twice, one for the wild type amino acid and one for 
-## the mutant amino acid, include: Class assignment (B for buried or E for Exposed), relative surface accessibility (RSA), 
-## absolute surface accessibility, Probability for Alpha-Helix, Probability for Beta-strand and Probability for Coil.
+## the mutant amino acid, include: Class assignment (B for buried or E for Exposed), relative surface accessibility (RSA), absolute surface accessibility, Probability for Alpha-Helix, Probability for Beta-strand and Probability for Coil.
