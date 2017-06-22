@@ -1,7 +1,7 @@
 set.seed(12345)
 library(plyr)
 library(randomForest)
-data <- read.csv("OGvTS.csv",header=TRUE,row.names = 1) # Read Data 
+data <- read.csv("TrainingSet-27features.csv",header=TRUE,row.names = 1) # Read Data 
 colnames(data)[1] <- "Class"  # assign response class 
 # split data in to predictors and response
 dataX <- data[,2:length(data)] 
@@ -38,12 +38,12 @@ for (i in 1:K1){
 		subset.range <- rr1 : rr2 # difine range .Though subsets are not picked randomly it may show poor performance. Better result required resampling without repetition
 		train.X <- data[-subset.range,(1:length(data) -1)]
 		train.Y <- data[-subset.range,length(data)]
-		train.Y <-  revalue(train.Y,c("OG" = "1","TS" = "0"))
+		train.Y <-  revalue(train.Y,c("TS" = "1","OG" = "0"))
 		test.X <- data[subset.range,(1:length(data)-1)]
 		test.Y <- data[subset.range,length(data)]
-		test.Y <-  revalue(test.Y,c("OG" = "1","TS" = "0"))
+		test.Y <-  revalue(test.Y,c("TS" = "1","OG" = "0"))
 		
-		modelFit <- randomForest(x=train.X,y=as.factor(train.Y),ntree=100, importance=TRUE,nodesize=5)  # depth = 5 no. of tree = 10. change accordingly. 
+		modelFit <- randomForest(x=train.X,y=as.factor(train.Y),ntree=10, importance=TRUE,nodesize=5)  # depth = 5 no. of tree = 10. change accordingly. 
 		predict.test <- predict(modelFit,newdata=test.X,type = "response")
 		
 
